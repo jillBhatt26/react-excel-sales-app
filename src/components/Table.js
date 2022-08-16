@@ -14,6 +14,7 @@ const Table = ({ summaryTableHeaderItems, salesSummary }) => {
                             ))}
                     </tr>
                 </thead>
+
                 <tbody>
                     {salesSummary.length > 0 &&
                         salesSummary.map((sales, sales_idx) => (

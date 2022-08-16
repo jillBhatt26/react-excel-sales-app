@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+
+import ActionBar from './ActionBar';
 import Table from './Table';
 import Uploader from './Uploader';
 
@@ -20,6 +22,14 @@ const Main = () => {
             {salesSummary.length > 0 && (
                 <Table
                     salesSummary={salesSummary}
+                    summaryTableHeaderItems={summaryTableHeaderItems}
+                />
+            )}
+
+            {salesSummary.length && (
+                <ActionBar
+                    salesSummary={salesSummary}
+                    setSalesSummary={setSalesSummary}
                     summaryTableHeaderItems={summaryTableHeaderItems}
                 />
             )}
